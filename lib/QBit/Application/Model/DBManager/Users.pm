@@ -66,9 +66,7 @@ sub query {
     my $filter = $self->db->filter($opts{'filter'});
 
     unless ($self->check_rights('users_view')) {
-        $filter->and(
-            ['id' => '=' => \$self->get_option('cur_user', {})->{'id'}]
-          );
+        $filter->and(['id' => '=' => \$self->get_option('cur_user', {})->{'id'}]);
     }
 
     return $self->db->query->select(
@@ -86,8 +84,10 @@ sub pre_process_fields {
     if ($fields->need('extra_fields')) {
         $fields->{'__EXTRA_FIELDS__'} = {};
 
-        my $extra_fields =
-          $self->db->users_extra_fields->get_all(fields => [qw(user_id key value is_json)], filter => {user_id => $user_ids});
+        my $extra_fields = $self->db->users_extra_fields->get_all(
+            fields => [qw(user_id key value is_json)],
+            filter => {user_id => $user_ids}
+        );
 
         foreach my $rec (@$extra_fields) {
             push(
@@ -209,7 +209,8 @@ sub edit {
 
     $self->check_user(\%opts);
 
-    my $extra_fields = delete($opts{'extra_fields'});
+    my $exists_extra_fields = exists($opts{'extra_fields'});
+    my $extra_fields        = delete($opts{'extra_fields'});
 
     $self->db->transaction(
         sub {
@@ -230,6 +231,8 @@ sub edit {
                 }
 
                 $self->db->users_extra_fields->add_multi(\@data) if @data;
+            } elsif ($exists_extra_fields) {
+                $self->db->users_extra_fields->delete($self->db->filter({user_id => $id}));
             }
         }
     );

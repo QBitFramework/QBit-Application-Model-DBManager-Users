@@ -53,7 +53,8 @@ $app->users->edit($id,
     extra_fields => {
         phone   => '+7 (123) 456-78-90',
         address => undef, # delete extra field
-    }
+    },
+    # extra_fields => undef - delete all extra fields for this user
 );
 ```
 
