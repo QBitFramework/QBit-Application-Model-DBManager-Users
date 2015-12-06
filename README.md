@@ -26,8 +26,9 @@ use QBit::Application::Model::DBManager::Users accessor => users; #in Applicatio
   - name (VARCHAR 255)
   - midname (VARCHAR 255)
   - surname (VARCHAR 255)
+  - extra_fields (perl hash)
 
-Extra fields contained in field "extra_fields"
+All extra fields contained in field "extra_fields"
 
 ### Methods:
 
