@@ -188,12 +188,16 @@ sub normalization_extra_fields {
 
             $extra_fields->{$key} = \@norm_data;
         } else {
-            $extra_fields->{$key} = [
-                {
-                    value   => $extra_fields->{$key},
-                    is_json => FALSE
-                }
-            ];
+            if (defined($extra_fields->{$key})) {
+                $extra_fields->{$key} = [
+                    {
+                        value   => $extra_fields->{$key},
+                        is_json => FALSE
+                    }
+                ];
+            } else {
+                $extra_fields->{$key} = [];
+            }
         }
     }
 
