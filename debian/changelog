@@ -1,5 +1,19 @@
 libqbit-application-model-dbmanager-users-perl (0.001) raring; urgency=low
 
+  * added files for build
+
+  * delete extra field if value undefined
+
+  * fix README.md
+
+  * delete all extra fields
+
+  * added QBit::Application::Model::DBManager::Users
+
+ -- Igor Sverdlov <igor-sverdlov@mail.ru>  Sun, 13 Dec 2015 01:41:42 +0300
+
+libqbit-application-model-dbmanager-users-perl (0.001) raring; urgency=low
+
   * Initial commit
 
  -- Igor Sverdlov <igor-sverdlov@mail.ru>  Sat, 12 Dec 2015 14:06:53 +0400
