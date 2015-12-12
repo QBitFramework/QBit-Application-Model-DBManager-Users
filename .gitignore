@@ -1,1 +1,5 @@
-.project
+/.project
+/.includepath
+/.build/*
+/QBit-Application-Model-DBManager-Users*
+/qbit-application-model-dbmanager-users*
