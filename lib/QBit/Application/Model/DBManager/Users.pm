@@ -245,3 +245,33 @@ sub edit {
 sub check_user { }
 
 TRUE;
+
+__END__
+
+=encoding utf8
+
+=head1 Name
+
+QBit::Application::Model::DBManager::Users - Model for work with users in QBit application.
+
+=head1 GitHub
+
+https://github.com/QBitFramework/QBit-Application-Model-DBManager-Users
+
+=head1 Install
+
+=over
+
+=item *
+
+cpanm QBit::Application::Model::DBManager::Users
+
+=item *
+
+apt-get install libqbit-application-model-dbmanager-users-perl (http://perlhub.ru/)
+
+=back
+
+For more information. please, see code.
+
+=cut
