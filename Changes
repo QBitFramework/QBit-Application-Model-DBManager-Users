@@ -1,0 +1,73 @@
+==================================================
+Changes from 2015-09-12 00:00:00 +0000 to present.
+==================================================
+
+------------------------------------------
+version 0.002 at 2016-09-11 13:00:24 +0000
+------------------------------------------
+
+  Change: 3018d7ea65fa1b3f9577bb7d5306efb51b701960
+  Author: Igor <igor-sverdlov@mail.ru>
+  Date : 2016-09-11 16:59:24 +0000
+
+    Merge pull request #1 from QBitFramework/upload_to_cpan
+
+    upload to cpan 
+
+  Change: 227f6b22d9844d8d523187beae2c9541df6f86f1
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2016-09-11 15:58:16 +0000
+
+    upload to cpan 
+
+------------------------------------------
+version 0.001 at 2015-12-12 22:41:57 +0000
+------------------------------------------
+
+  Change: 94fcc7dc456cfe3ef73d1a757913cf972b6c8c06
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2015-12-13 01:41:57 +0000
+
+    Version 0.001 
+
+  Change: 5d693dfd6808356f80eaf3d3cdb77fba3ebfbd02
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2015-12-13 01:40:01 +0000
+
+    Merge branch 'master' of
+    https://github.com/QBitFramework/QBit-Application-Model-DBManager-Use
+    rs 
+
+  Change: 4eb59847466492e8be2c29f17a18ba3ad2c2448b
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2015-12-13 01:38:05 +0000
+
+    added files for build 
+
+  Change: af992b972f256dcfcc45260fce37e75d228bb7c8
+  Author: Igor Sverdlov <blizzard@yandex-team.ru>
+  Date : 2015-12-11 22:12:03 +0000
+
+    delete extra field if value undefined 
+
+  Change: 4c112abf6a03d995828b807a95ce59e9ae26d82b
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2015-12-06 23:02:33 +0000
+
+    fix README.md 
+
+  Change: 95a449d2decd2c524a5beb862673cb59645b7e55
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2015-12-06 23:00:19 +0000
+
+    delete all extra fields 
+
+  Change: f8ae188c5dec07be67d78cefdb77cde1728db956
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2015-12-06 22:48:00 +0000
+
+    added QBit::Application::Model::DBManager::Users 
+
+================
+End of releases.
+================
