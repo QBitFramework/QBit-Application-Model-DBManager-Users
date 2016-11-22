@@ -19,4 +19,4 @@ requires:
   QBit::Application::Model::DBManager::Filter::text: 0
   base: 0
   qbit: 0
-version: 0.002
+version: 0.003
