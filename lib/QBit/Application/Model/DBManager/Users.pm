@@ -160,7 +160,7 @@ sub normalization_extra_fields {
             $extra_fields->{$key} = [
                 {
                     value   => to_json($extra_fields->{$key}),
-                    is_json => TRUE
+                    is_json => 1
                 }
             ];
         } elsif (ref($extra_fields->{$key}) eq 'ARRAY') {
@@ -172,7 +172,7 @@ sub normalization_extra_fields {
                         @norm_data,
                         {
                             value   => to_json($value),
-                            is_json => TRUE
+                            is_json => 1
                         }
                     );
                 } else {
@@ -180,7 +180,7 @@ sub normalization_extra_fields {
                         @norm_data,
                         {
                             value   => $value,
-                            is_json => FALSE
+                            is_json => 0
                         }
                     );
                 }
@@ -192,7 +192,7 @@ sub normalization_extra_fields {
                 $extra_fields->{$key} = [
                     {
                         value   => $extra_fields->{$key},
-                        is_json => FALSE
+                        is_json => 0
                     }
                 ];
             } else {
