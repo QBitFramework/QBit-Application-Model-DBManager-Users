@@ -22,34 +22,26 @@ __PACKAGE__->register_rights(
     ]
 );
 
-__PACKAGE__->model_fields(__PACKAGE__->get_model_users_fields,);
+__PACKAGE__->model_fields(
+    id        => {db => TRUE, pk    => TRUE, default => TRUE, label => d_gettext('ID')},
+    create_dt => {db => TRUE, label => d_gettext('Create date')},
+    login        => {db => TRUE, default => TRUE, label => d_gettext('Login')},
+    mail         => {db => TRUE, default => TRUE, label => d_gettext('Mail')},
+    name         => {db => TRUE, label   => d_gettext('Name')},
+    midname      => {db => TRUE, label   => d_gettext('Midname')},
+    surname      => {db => TRUE, label   => d_gettext('Surname')},
+    extra_fields => {
+        depends_on => ['id'],
+        label      => d_gettext('Extra fields'),
+        get        => sub {
+            $_[0]->{'__EXTRA_FIELDS__'}{$_[1]->{'id'}} // {};
+          }
+    }
+);
 
 __PACKAGE__->model_filter(
     db_accessor => 'db',
-    fields      => {__PACKAGE__->get_model_users_filter_fields,}
-);
-
-sub get_model_users_fields {
-    return (
-        id        => {db => TRUE, pk    => TRUE, default => TRUE, label => d_gettext('ID')},
-        create_dt => {db => TRUE, label => d_gettext('Create date')},
-        login        => {db => TRUE, default => TRUE, label => d_gettext('Login')},
-        mail         => {db => TRUE, default => TRUE, label => d_gettext('Mail')},
-        name         => {db => TRUE, label   => d_gettext('Name')},
-        midname      => {db => TRUE, label   => d_gettext('Midname')},
-        surname      => {db => TRUE, label   => d_gettext('Surname')},
-        extra_fields => {
-            depends_on => ['id'],
-            label      => d_gettext('Extra fields'),
-            get        => sub {
-                $_[0]->{'__EXTRA_FIELDS__'}{$_[1]->{'id'}} // {};
-              }
-        }
-    );
-}
-
-sub get_model_users_filter_fields {
-    return (
+    fields      => {
         id        => {type => 'number'},
         create_dt => {type => 'text'},
         login     => {type => 'text'},
@@ -57,8 +49,8 @@ sub get_model_users_filter_fields {
         name      => {type => 'text'},
         midname   => {type => 'text'},
         surname   => {type => 'text'},
-    );
-}
+    }
+);
 
 sub query {
     my ($self, %opts) = @_;
