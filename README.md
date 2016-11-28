@@ -70,12 +70,11 @@ package Application::Model::Users;
 
 use qbit;
 
-use base qw(QBit::Application::Model::DBManager::Users); #QBit::Application::Model::Multistate
+use QBit::Base qw(QBit::Application::Model::DBManager::Users); #QBit::Application::Model::Multistate
 
 __PACKAGE__->model_accessors(db => 'QBit::Application::Model::DB::Users');
 
 __PACKAGE__->model_fields(
-    __PACKAGE__->SUPER::get_model_users_fields,
     full_name => {
         label      => d_gettext('Full name'),
         depends_on => [qw(name midname surname)],
@@ -96,7 +95,6 @@ __PACKAGE__->model_fields(
 __PACKAGE__->model_filter(
     db_accessor => 'db',
     fields      => {
-        __PACKAGE__->SUPER::get_model_users_filter_fields,
         # filter field for extra fields
         phone => {
             type     => 'extra_fields',
