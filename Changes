@@ -1,10 +1,34 @@
 ==================================================
-Changes from 2015-11-23 00:00:00 +0000 to present.
+Changes from 2015-11-29 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.003 at 2016-11-22 22:11:05 +0000
+version 0.004 at 2016-11-28 19:08:27 +0000
 ------------------------------------------
+
+  Change: bfca00be2e277e0ee0cbdc30f4e898e52d127729
+  Author: Igor <igor-sverdlov@mail.ru>
+  Date : 2016-11-28 22:07:23 +0000
+
+    Merge pull request #3 from QBitFramework/use_meta
+
+    use standart meta 
+
+  Change: 36aa3ba96f4577e51ea8080ccc26e1400a7ee333
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2016-11-28 22:04:01 +0000
+
+    use standart meta 
+
+------------------------------------------
+version 0.003 at 2016-11-22 22:11:26 +0000
+------------------------------------------
+
+  Change: e022b06ca55d7e6a503196fedcd42251a6541838
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2016-11-23 01:11:26 +0000
+
+    Version 0.003 
 
   Change: 499bae0d537f0dcb1850f04d7fa3089f7d5358bf
   Author: Igor <igor-sverdlov@mail.ru>
