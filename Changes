@@ -3,8 +3,32 @@ Changes from 2015-12-04 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.005 at 2016-12-03 18:52:04 +0000
+version 0.006 at 2016-12-03 19:25:03 +0000
 ------------------------------------------
+
+  Change: baf86bc27dd78cd25d261951453a8093463b253f
+  Author: Igor <igor-sverdlov@mail.ru>
+  Date : 2016-12-03 22:24:03 +0000
+
+    Merge pull request #5 from QBitFramework/added_sub_like
+
+    use sub 
+
+  Change: 4618922aae3a1dfa10406fd91306d61b8abd69c1
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2016-12-03 22:22:46 +0000
+
+    use sub 
+
+------------------------------------------
+version 0.005 at 2016-12-03 18:52:34 +0000
+------------------------------------------
+
+  Change: b6365023a5f1553f829034db4e908fb2978b9044
+  Author: Igor Sverdlov <igor-sverdlov@mail.ru>
+  Date : 2016-12-03 21:52:34 +0000
+
+    Version 0.005 
 
   Change: a30d3f42b1dae50a992945b9fe734ae9bd0259d4
   Author: Igor <igor-sverdlov@mail.ru>

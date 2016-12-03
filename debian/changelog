@@ -1,3 +1,9 @@
+libqbit-application-model-dbmanager-users-perl (0.006) raring; urgency=low
+
+  * use sub
+
+ -- Igor Sverdlov <igor-sverdlov@mail.ru>  Sat, 03 Dec 2016 22:25:03 +0300
+
 libqbit-application-model-dbmanager-users-perl (0.005) raring; urgency=low
 
   * use cur_user
