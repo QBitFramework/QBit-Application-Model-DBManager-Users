@@ -58,7 +58,7 @@ sub query {
     my $filter = $self->db->filter($opts{'filter'});
 
     unless ($self->check_rights('users_view')) {
-        $filter->and(['id' => '=' => \$self->get_option('cur_user', {})->{'id'}]);
+        $filter->and(['id' => '=' => \$self->cur_user()->{'id'}]);
     }
 
     return $self->db->query->select(
