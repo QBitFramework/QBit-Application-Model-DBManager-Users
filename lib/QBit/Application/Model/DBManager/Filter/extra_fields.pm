@@ -15,8 +15,7 @@ sub as_filter {
     my $table      = $field->{'table'};
 
     return [
-        defined($field->{'db_expr'})
-        ? $field->{'db_expr'}
+        defined($field->{'db_expr'}) ? $field->{'db_expr'}
         : $field_name => '= ANY' => $self->{'db_manager'}->$db_accessor->query->select(
             table  => $self->{'db_manager'}->$db_accessor->$table,
             fields => [$fk_field],
@@ -24,7 +23,13 @@ sub as_filter {
                 'AND',
                 [
                     ['key' => '=' => \$data->[0]],
-                    ['value' => $data->[1] => \($data->[1] =~ /LIKE/ ? __like_str($data->[2]) : $data->[2])]
+                    [
+                        'value' => $data->[1] => \(
+                            $data->[1] =~ /LIKE/
+                            ? QBit::Application::Model::DBManager::Filter::text::__like_str($data->[2])
+                            : $data->[2]
+                        )
+                    ]
                 ]
             ]
         )
