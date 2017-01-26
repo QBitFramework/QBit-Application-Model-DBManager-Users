@@ -71,14 +71,12 @@ sub query {
 sub pre_process_fields {
     my ($self, $fields, $result) = @_;
 
-    my $user_ids = array_uniq(map {$_->{'id'}} @$result);
-
     if ($fields->need('extra_fields')) {
         $fields->{'__EXTRA_FIELDS__'} = {};
 
         my $extra_fields = $self->db->users_extra_fields->get_all(
             fields => [qw(user_id key value is_json)],
-            filter => {user_id => $user_ids}
+            filter => {user_id => array_uniq(map {$_->{'id'}} @$result)}
         );
 
         foreach my $rec (@$extra_fields) {
